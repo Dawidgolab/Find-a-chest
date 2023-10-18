@@ -1,41 +1,108 @@
-</h1> Find-a-chest </h1>
-This program performs a short game "Find the chest" and counts how many points we have scored
+# Find-a-Chest Game
 
-<h2>Find-a-Chest Game</h2>
-Welcome to the Exciting World of Treasure Hunting!
+## Welcome to the Exciting World of Treasure Hunting!
 
-Are you ready for an adventure like no other? Dive into the captivating realm of the "Find-a-Chest" game, a Python-based treasure hunt that will test your luck, strategy, and intuition. In this game, you are given the opportunity to uncover hidden treasures and amass points, but beware, your chances are limited!
+Are you ready for an adventure like no other? Dive into the captivating realm of the "Find-a-Chest" game, 
+a Python-based treasure hunt that will test your luck, strategy, and intuition. 
+In this game, you are given the opportunity to uncover hidden treasures and amass points, but beware, your chances are limited!
 
-</h2>Gameplay</h2>
-</h3>Starting Moves:</h3> Your treasure-hunting journey begins with 5 moves, and your objective is to make the most of each move.
 
-</h3>Move Forward or Quit:</h3> At the start of each turn, you'll have a critical decision to make. Do you wish to move forward in your quest, or will you choose to end the game? The choice is yours to make.
+<br><br><br><br><br><br>
 
-</h3>Discovering Your Fate:</h3> Opting to move forward means you will leave your fate in the hands of destiny. A roll of the virtual dice determines your outcome:
 
-</h3>60% Chance of Finding a Chest:</h3> With a 60% probability, you may uncover one of the precious chests hidden in the game.
+## Gameplay
+### Starting Moves: 
 
-</h3>40% Chance of Finding Nothing:</h3> Unfortunately, luck may not always be on your side, and you may discover nothing on some of your moves.
+* Your treasure-hunting journey begins with 5 moves, and your objective is to make the most of each move.
 
-</h3>Chest Points:</h3> If you're fortunate enough to stumble upon a chest, your score will increase, and the color of the chest will dictate the number of points you earn:
+### Move Forward or Quit: 
 
-</h3>Green Chest:</h3> Uncover a green chest, and you'll receive a rewarding 1000 points.
+* At the start of each turn, you'll have a critical decision to make. Do you wish to move forward in your quest, or will you choose to end the game? The choice is yours to make.
 
-</h3>Orange Chest:</h3> Orange chests are worth 4000 points, a valuable discovery.
+### Discovering Your Fate: 
 
-</h3>Purple Chest:</h3> Purple chests are even more valuable, offering an astonishing 9000 points.
+* Opting to move forward means you will leave your fate in the hands of destiny. A roll of the virtual dice determines your outcome:
 
-</h3>Gold Chest:</h3> The ultimate treasure is the gold chest, adding a remarkable 16000 points to your score.
+### 60% Chance of Finding a Chest: 
 
-</h3>Keep an Eye on Your Score:</h3> As you proceed through your 5 moves, don't forget to keep a close watch on your score. The final tally will be revealed once you've used all your chances.
+* With a 60% probability, you may uncover one of the precious chests hidden in the game.
 
-</h1>How to Run the Game</h2>
-</h3>Prerequisites:</h3> Ensure you have Python installed on your local system. If not, you can download and install it from Python's official website.
+### 40% Chance of Finding Nothing: 
 
-</h3>Get the Game:</h3> Download or clone this repository to your computer.
+* Unfortunately, luck may not always be on your side, and you may discover nothing on some of your moves.
 
-</h3>Run the Game:</h3> Open your terminal and navigate to the game's directory. Execute the game by entering the command python Find-a-Chest.py.
+### Chest Points: 
 
-</h2>Get Ready to Embark on an Unforgettable Journey!</h2>
+* If you're fortunate enough to stumble upon a chest, your score will increase, and the color of the chest will dictate the number of points you earn:
 
-Get ready to embark on a thrilling adventure, test your luck, and see how many points you can gather. The "Find-a-Chest" game is a fun and engaging way to challenge yourself and others to uncover hidden treasures. Will you emerge as a master treasure hunter? Play and find out!
+### Green Chest: 
+
+* Uncover a green chest, and you'll receive a rewarding 1000 points.
+
+### Orange Chest: 
+
+* Orange chests are worth 4000 points, a valuable discovery.
+
+### Purple Chest: 
+
+* Purple chests are even more valuable, offering an astonishing 9000 points.
+
+### Gold Chest: 
+
+* The ultimate treasure is the gold chest, adding a remarkable 16000 points to your score.
+
+### Keep an Eye on Your Score:
+
+* As you proceed through your 5 moves, don't forget to keep a close watch on your score. The final tally will be revealed once you've used all your chances.
+
+
+<br><br><br><br><br><br>
+
+
+## How to Run the Game
+### Prerequisites: 
+
+* Ensure you have Python installed on your local system. If not, you can download and install it from Python's official website.
+
+### Get the Game: 
+
+* Download or clone this repository to your computer.
+
+### Run the Game: 
+
+* Open your terminal and navigate to the game's directory. Execute the game by entering the command python Find-a-Chest.py.
+
+
+<br><br><br><br><br><br>
+
+
+# Code description
+
+1.It imports the random module to introduce randomness into the game.
+
+2.myAccount is initialized to keep track of the player's total score.
+
+3.Prize is a list containing two messages:
+
+- "Congratulations! You've found a chest!"
+- "Unfortunately, you found nothing."
+
+4.There are four dictionaries, Chest1 to Chest4, each representing a different chest with color and points. These chests have different point values based on their color.
+
+5.Chests is a list that contains the four dictionaries representing the different chests.
+
+6.The game starts with a welcoming message, and the player is informed that they have 5 moves to uncover treasure.
+
+7.The gamerChoice variable is initialized to 1, and there's a while loop that runs while gamerChoice is less than or equal to 5, meaning the player has 5 moves.
+
+8.In each iteration of the loop, it displays the move number using the gamerChoice variable and asks the player if they want to move forward by typing 'yes' or end the game by typing 'no'.
+
+9.If the player chooses to move forward ('yes'), the script simulates the outcome using randomness. It uses the random.choices function to simulate a 60% chance of finding a chest and a 40% chance of finding nothing. The result is stored in stepYesOrNo.
+
+10.If the result is "Congratulations! You've found a chest!", the script simulates the discovery of a chest by using the random.choices function to determine which chest the player found. It displays the color of the chest and adds the points to myAccount.
+
+11.If the player makes more than 5 moves, the script displays the total points scored and the game ends.
+
+12.If the player chooses to end the game ('no'), a goodbye message is displayed, and the loop is terminated.
+
+13.If the player inputs anything other than 'yes' or 'no', an error message is displayed, and the player can try again.
